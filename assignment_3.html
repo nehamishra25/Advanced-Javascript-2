@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3</title>
+</head>
+<body>
+<button onclick="objectCreate()">Car Details Storage</button>
+<script type="text/javascript">
+function objectCreate() {
+	var vehicleNew= new vehicle();
+}
+function vehicle() {
+	var make=prompt("Make--->" );
+	this.make=make;
+	var year=prompt("Year--->" );
+	this.year=year;
+	var model=prompt("Model--->" );
+	this.model=model;
+	var number=prompt("Number--->" );
+	this.number=number;
+	var color=prompt("Color--->" );
+	this.color=color;
+
+	function display(make,year,model,number,color){
+		document.write(" The vehicle's make is of: " + make + "<br>");
+		document.write(" Year of introduction : " + year + "<br>");
+		document.write(" Model No. : " + model + "<br>");
+		document.write(" Number on vehicle plate : " +  number + "<br>");
+		document.write(" Color : " +  color + "<br>");
+	}
+	display(this.make,this.year,this.model,this.number,this.color);
+}
+</script>
+</body>
+</html>

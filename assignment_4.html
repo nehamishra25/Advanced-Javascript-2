@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function person(name, age) {
+			this.name= name;
+			this.age = age;
+		}
+		function student() {}
+		var per= new person("Neha Mishra", 21);
+		person.prototype.email= "neha.mishra@newgen.co.in";
+		student.prototype= per;
+
+		student.prototype.change_name= function() {
+			var a= prompt("Change the name of student.");
+			var b= prompt("Change the email address.")
+			this.name= a;
+			this.email= b;
+		}
+
+		student.prototype.display=function(){
+			document.write("Name : " + this.name + "<br>");
+			document.write("Age : " + this.age + "<br>");
+			document.write("email : " + this.email + "<br>");
+			
+			var d=prompt("Do you want to change name ? Press y for yes and n for no","");
+			if(d === "y"){
+				this.change_name();
+				this.display();
+			}else if(d=="n"){
+				
+			} else {
+				document.write("Enter valid option" + "<br>");
+				this.display();
+			}
+			document.write("<br>");
+		}
+		var student1= new student();
+		student1.display();
+
+	</script>
+</body>
+</html>

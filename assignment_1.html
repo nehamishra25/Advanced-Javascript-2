@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1</title>
+</head>
+<body>
+<p id="para1"></p>
+<p id="para2"></p>
+<script type="text/javascript">
+		function car(make, model, year) {
+			this.make= make;
+			this.model= model;
+			this.year= year;
+		}
+		var carObj1= new car("Mazuki", "Maruti Suzuki ZC72S", "2010");
+		var carObj2= new car("BMW", "BMW X4", "2013");
+		document.getElementById("para1").innerHTML= "Make and model of the car is "+ carObj1.model+" by "+ carObj1.make+" in the year "+ carObj1.year;
+		document.getElementById("para2").innerHTML= "Make and model of the car is "+ carObj2.model+" by "+ carObj2.make+" in the year "+ carObj2.year; 
+	</script>
+</body>
+</html>
